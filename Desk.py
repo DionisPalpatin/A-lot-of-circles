@@ -19,7 +19,7 @@ for i in range(quantity):
         "direction" : 1 - i // 100 * 2
     }
 for i in range(quantity // 4):
-    temporary = i * 2 * rad + rad   #ради уменьшения количества вычислений за один проход цикла
+    temporary = i * 2 * rad + rad   #ввожу переменную лишнюю ради уменьшения количества вычислений за один проход цикла
     pg.draw.circle(window, (randint(0, 254), randint(0, 254), randint(0, 254)), (temporary, temporary), rad)
 
 
