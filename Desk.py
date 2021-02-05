@@ -15,7 +15,7 @@ window.fill((255, 255, 255))
 circles = {}
 for i in range(quantity):
     circles[i] = {
-        "coord" : rad + i % 100 % 50 * 10,
+        "coord" : rad + i % 50 * 10,
         "direction" : 1 - i // 100 * 2
     }
 for i in range(quantity // 4):
