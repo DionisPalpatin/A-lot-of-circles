@@ -3,7 +3,7 @@ from random import randint
 
 
 rad = 5
-quantity = 200   #тут число точно должно быть кратно 4, потому что это высота (и ширина) в кругах, умноженная на 4
+quantity = 200   #тут число точно должно быть кратно 4, потому что это высота (или ширина) в кругах, умноженная на 4
 size = rad * 2 * quantity // 4
 
 
@@ -19,7 +19,7 @@ for i in range(quantity):
         "direction" : 1 - i // 100 * 2
     }
 for i in range(quantity // 4):
-    temporary = i * 2 * rad + rad   #ввожу лишнюю переменную ради уменьшения количества вычислений за один проход цикла
+    temporary = i * 2 * rad + rad   #ради уменьшения количества вычислений за один проход цикла
     pg.draw.circle(window, (randint(0, 254), randint(0, 254), randint(0, 254)), (temporary, temporary), rad)
 
 
@@ -38,7 +38,7 @@ while True:
 
     window.fill((255, 255, 255))
     for i in range(quantity):
-        temporary = i % 100 % 50 * 2 * rad + rad    #и вновь ради уменьшения кол-ва вычислений за один проход цикла
+        temporary = i % 50 * 2 * rad + rad    #и вновь ради уменьшения кол-ва вычислений за один проход цикла
         if not i // 50 % 2:
             pg.draw.circle(window, (randint(0, 254), randint(0, 254), randint(0, 254)), (circles[i]["coord"], temporary), rad)
         else:
